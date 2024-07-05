@@ -333,6 +333,7 @@ const closeModalWishlist = () => {
 };
 
 addWishlistBtns.forEach((addWishlistBtn) => {
+    debugger
     addWishlistBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         addWishlistBtn.classList.toggle("active");
@@ -365,18 +366,22 @@ const handleItemModalWishlist = () => {
         wishlistIcon.querySelector("span").innerHTML =
             JSON.parse(wishlistStore).length;
     }
-
+    debugger
     // Set wishlist item
     const listItemWishlist = document.querySelector(
         ".modal-wishlist-block .list-product"
     );
 
     listItemWishlist.innerHTML = "";
-
-    if (JSON.parse(wishlistStore).length === 0) {
+    debugger
+    var getWishlistItem = localStorage.getItem("_Wishlistitems");
+    console.log(getWishlistItem);
+    debugger
+    if (JSON.parse(getWishlistItem).length === 0) {
         listItemWishlist.innerHTML = `<p class='mt-1'>No product in wishlist</p>`;
     } else {
-        JSON.parse(wishlistStore).forEach((item) => {
+        debugger
+        JSON.parse(getWishlistItem).forEach((item) => {
             const prdItem = document.createElement("div");
             prdItem.setAttribute("data-item", item.id);
             prdItem.classList.add(
@@ -392,15 +397,15 @@ const handleItemModalWishlist = () => {
             prdItem.innerHTML = `
                 <div class="infor flex items-center gap-5">
                     <div class="bg-img">
-                        <img src=${item.thumbImage[0]} alt='product'
+                        <img src=${item.Image} alt='product'
                             class='w-[100px] aspect-square flex-shrink-0 rounded-lg' />
                     </div>
                     <div class=''>
-                        <div class="name text-button">${item.name}</div>
+                        <div class="name text-button">${item.Name}</div>
                         <div class="flex items-center gap-2 mt-2">
-                            <div class="product-price text-title">$${item.price}.00</div>
+                            <div class="product-price text-title">$${item.Price}.00</div>
                             <div class="product-origin-price text-title text-secondary2">
-                                <del>$${item.originPrice}.00</del>
+                                <del>$${item.Price}.00</del>
                             </div>
                         </div>
                     </div>
@@ -414,7 +419,7 @@ const handleItemModalWishlist = () => {
             listItemWishlist.appendChild(prdItem);
         });
     }
-
+    debugger
     const prdItems = listItemWishlist.querySelectorAll(".item");
     prdItems.forEach((prd) => {
         const removeWishlistBtn = prd.querySelector(".remove-wishlist-btn");
@@ -426,7 +431,7 @@ const handleItemModalWishlist = () => {
             const newArray = JSON.parse(wishlistStore).filter(
                 (item) => item.id !== prdId
             );
-            localStorage.setItem("wishlistStore", JSON.stringify(newArray));
+            localStorage.setItem("getWishlistItem", JSON.stringify(newArray));
             handleItemModalWishlist();
             updateWishlistIcons();
         });
@@ -497,28 +502,32 @@ modalCartMain.addEventListener("click", (e) => {
 const handleItemModalCart = () => {
     cartStore = localStorage.getItem("cartStore");
     cartStore = cartStore ? JSON.parse(cartStore) : [];
-
+    debugger
     if (cartStore) {
         cartIcon.querySelector("span").innerHTML = cartStore.length;
     }
-
+    debugger
     // Set cart item
     const listItemCart = document.querySelector(
+   
         ".modal-cart-block .list-product"
     );
-
+    debugger
     listItemCart.innerHTML = "";
-
-    if (cartStore.length === 0) {
+    debugger
+    var getWishlistItem = localStorage.getItem("_Wishlistitems");
+    console.log(getWishlistItem);
+    
+    if (getWishlistItem == null && getWishlistItem == "") {
         listItemCart.innerHTML = `<p class='mt-1'>No product in cart</p>`;
     } else {
-        // Initial money to freeship in cart
+        let wishlistItems = JSON.parse(getWishlistItem);
         let moneyForFreeship = 150;
         let totalCart = 0;
-
-        cartStore.forEach((item) => {
+        
+        wishlistItems.forEach((item) => {
             totalCart = Number(totalCart) + Number(item.price)
-
+            debugger
             // Create prd
             const prdItem = document.createElement("div");
             prdItem.setAttribute("data-item", item.id);
@@ -535,12 +544,12 @@ const handleItemModalCart = () => {
             prdItem.innerHTML = `
                 <div class="infor flex items-center gap-3 w-full">
                     <div class="bg-img w-[100px] aspect-square flex-shrink-0 rounded-lg overflow-hidden">
-                        <img src=${item.thumbImage[0]} alt='product'
+                        <img src=${item.Image} alt='product'
                             class='w-full h-full' />
                     </div>
                     <div class='w-full'>
                         <div class="flex items-center justify-between w-full">
-                            <div class="name text-button">${item.name}</div>
+                            <div class="name text-button">${item.Name}</div>
                             <div
                                 class="remove-cart-btn remove-btn caption1 font-semibold text-red underline cursor-pointer">
                                 Remove
@@ -548,9 +557,9 @@ const handleItemModalCart = () => {
                         </div>
                         <div class="flex items-center justify-between gap-2 mt-3 w-full">
                             <div class="flex items-center text-secondary2 capitalize">
-                                ${item.sizes[0]}/${item.variation[0].color}
+                                ${item.Qty}
                             </div>
-                            <div class="product-price text-title">$${item.price}.00</div>
+                            <div class="product-price text-title">$${item.Price}.00</div>
                         </div>
                     </div>
                 </div>

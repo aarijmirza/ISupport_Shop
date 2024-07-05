@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\ISupportWebsite.csproj": {}
+    "E:\\Project\\ISupportShop\\ISupportWebsite\\ISupportWebsite.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\ISupportWebsite.csproj": {
+    "E:\\Project\\ISupportShop\\ISupportWebsite\\ISupportWebsite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\ISupportWebsite.csproj",
+        "projectUniqueName": "E:\\Project\\ISupportShop\\ISupportWebsite\\ISupportWebsite.csproj",
         "projectName": "ISupportWebsite",
-        "projectPath": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\ISupportWebsite.csproj",
-        "packagesPath": "C:\\Users\\MRC\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\obj\\",
+        "projectPath": "E:\\Project\\ISupportShop\\ISupportWebsite\\ISupportWebsite.csproj",
+        "packagesPath": "C:\\Users\\Airtech Soutions\\.nuget\\packages\\",
+        "outputPath": "E:\\Project\\ISupportShop\\ISupportWebsite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MRC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Airtech Soutions\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -73,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

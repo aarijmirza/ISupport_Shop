@@ -489,7 +489,6 @@ function getCartLS() {
 }
 
 
-
 //Wishlist
 function addtoWishlist(ItemID, Name, Image, Price, DiscountedPrice, Type, Qty) {
     debugger
