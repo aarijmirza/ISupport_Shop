@@ -1,0 +1,575 @@
+﻿@model ISupportWebsite.Models.BLL.serviceBLL;
+@{
+    ViewData["Title"] = "Home";
+    var selectedCategoryID = ViewBag.SelectedCategoryID;
+}
+<style>
+    .active {
+        font-weight: bold; /* Example style for active tab */
+        color: black; /* Ensure the text color changes for active tab */
+    }
+
+    .PopularService-container {
+        border-radius: 999999px;
+        background: linear-gradient(to right, #EFD74A, #F9444B, #2AA1FB, #14E4AB);
+        padding: 2px;
+    }
+
+    .PopularService-Circle {
+        border: none;
+        border-radius: 999999px;
+        padding: 46px 46px;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .discount-container {
+        width: 65%;
+        border-radius: 10px;
+        background: linear-gradient(to right, #EFD74A, #F9444B, #2AA1FB, #14E4AB);
+        padding: 1px;
+    }
+
+    .discount-bar {
+        border: none;
+        border-radius: 10px;
+        padding: 8px 15px;
+        background-color: #094E81;
+        cursor: pointer;
+    }
+
+    .text-limit {
+        display: block;
+        width: 235px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .product-thumb {
+        border: 1px solid #CCCCCC;
+        border-radius: 15px;
+        width: 234px;
+        height: 234px;
+    }
+
+    @@media only screen and (max-width: 600px) {
+        .product-thumb {
+            border: 1px solid #CCCCCC;
+            border-radius: 15px;
+            width: 175px;
+            height: 175px;
+        }
+
+        .text-limit {
+            display: block;
+            width: 170px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .main-bg {
+            height: 160px !important;
+        }
+
+        .main-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .text-sub-display {
+            font-size: 8px !important;
+            line-height: 16px;
+            letter-spacing: 1.1px;
+        }
+    }
+
+    .button-shop {
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #094E81;
+        background-color: var(--white);
+        padding: 10px 30px;
+        border-radius: 25px;
+        display: inline-block;
+        cursor: pointer;
+        transition: all ease 0.4s;
+    }
+</style>
+
+<!-- Slider -->
+<div class="slider-block style-one md:h-[580px] sm:h-[500px] h-[350px] max-[420px]:h-[320px] w-full main-bg" style="background:url('assets/images/home-slider.png'); background-size:cover; margin-top:5rem;height: 713px;">
+    <div class="slider-main h-full w-full">
+        <div class="swiper swiper-slider h-full relative">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-item h-full w-full relative">
+                        <div class="container w-full h-full flex items-center relative">
+                            <div class="text-content basis-1/2">
+                                <div class="discount-container">
+                                    <div class="text-sub-display text-white discount-bar">10% Discount on All Products</div>
+                                </div>
+                                <div class="text-display text-white md:mt-5 mt-2 main-title" style="font-weight:600">Order Today, Enjoy Today</div>
+                                <a href='' class="button-main md:mt-8 mt-3">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@* <div class="slider-block style-one bg-linear xl:h-[860px] lg:h-[800px] md:h-[580px] sm:h-[500px] h-[350px] max-[420px]:h-[320px] w-full">
+    <div class="slider-main h-full w-full">
+        <div class="swiper swiper-slider h-full relative">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-item h-full w-full relative">
+                        <div class="container w-full h-full flex items-center relative">
+                            <div class="text-content basis-1/2">
+                                <div class="text-sub-display">Sale! Up To 50% Off!</div>
+                                <div class="text-display md:mt-5 mt-2">Summer Sale Collections</div>
+                                <a href='shop-breadcrumb-img.html' class="button-main md:mt-8 mt-3">
+                                    Shop Now
+                                </a>
+                            </div>
+                            <div class="sub-img absolute sm:w-1/2 w-3/5 2xl:-right-[60px] -right-[16px] bottom-0">
+                                <img src='assets/images/slider/bg1-1.png' alt='bg1-1'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-item h-full w-full relative">
+                        <div class="container w-full h-full flex items-center relative">
+                            <div class="text-content basis-1/2">
+                                <div class="text-sub-display">Sale! Up To 50% Off!</div>
+                                <div class="text-display md:mt-5 mt-2">Fashion for Every Occasion</div>
+                                <a href='shop-breadcrumb-img.html' class="button-main md:mt-8 mt-3">
+                                    Shop Now
+                                </a>
+                            </div>
+                            <div class="sub-img absolute w-1/2 2xl:-right-[60px] -right-[0] sm:-bottom-[60px] bottom-0">
+                                <img src='assets/images/slider/bg1-2.png' alt='bg1-2'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-item h-full w-full relative">
+                        <div class="container w-full h-full flex items-center relative">
+                            <div class="text-content basis-1/2">
+                                <div class="text-sub-display">Sale! Up To 50% Off!</div>
+                                <div class="text-display md:mt-5 mt-2">Stylish Looks for Any Season</div>
+                                <a href='shop-breadcrumb-img.html' class="button-main md:mt-8 mt-3">
+                                    Shop Now
+                                </a>
+                            </div>
+                            <div class="sub-img absolute sm:w-1/2 w-2/3 2xl:-right-[60px] -right-[36px] sm:bottom-0 -bottom-[30px]">
+                                <img src='assets/images/slider/bg1-3.png' alt='bg1-3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div> *@
+
+<!-- Top Service Section -->
+<div class="trending-block style-six md:pt-20 pt-10">
+    <div class="container-AllProducts">
+        <div class="heading3 text-center">
+            Popular Services
+        </div>
+        <div class="list-trending relative section-swiper-navigation style-small-border style-outline md:mt-10 mt-6">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper swiper-list-trending h-full relative">
+                <div class="swiper-wrapper">
+                    @foreach (var item in ViewBag.popularService)
+                    {
+                        <div class="swiper-slide">
+                            <a href="" class="trending-item block relative cursor-pointer">
+                                <div class="PopularService-container">
+                                    <div class="bg-img text-center overflow-hidden PopularService-Circle">
+                                        <img src="@ViewBag.ImageUrl@item.Image" alt="@item.Name" class='w-[75%]'>
+                                        @* <img src='assets/images/collection/category-organic1.png' alt='outerwear' class='w-full'> *@
+                                    </div>
+                                </div>
+                                <div class="trending-name text-center mt-5 duration-500">
+                                    <span class='heading5'>@item.Name</span>
+                                    @* <span class='text-secondary'> (12)</span> *@
+                                </div>
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Promotional Banner Section -->
+<div class="banner-block md:pt-20 pt-10 pb-5">
+    <div class="container-AllProducts grid lg:grid-cols-3 sm:grid-cols-2 gap-[30px]">
+        @foreach (var item in ViewBag.serviceBanner)
+        {
+            @* <a href="" class="banner-ads-item bg-linear rounded-2xl relative overflow-hidden block cursor-pointer" style="background-image:url('@ViewBag.ImageUrl@item.Image'); background-size:cover;"></a> *@
+            <a href="@Url.Action("Service", "Home", new { ServiceID = item.ServiceID })" class="banner-item relative block rounded-[20px] overflow-hidden duration-500">
+                <div class="banner-img w-full h-full">
+                    <img src='@ViewBag.ImageUrl@item.Image' alt='bg-img' class='w-full h-full object-cover duration-500'>
+                </div>
+                <div class="text-content xl:py-0 md:py-4 absolute top-1/2 left-8 -translate-y-1/2 text-white">
+                    <div class="heading2 mt-3" style="width: 90%;">@item.Title</div>
+                    <div class="heading4 font-bold mt-1">@item.Description</div>
+                    <div class="button-shop mt-5">Shop Now</div>
+                </div>
+            </a>
+        }
+    </div>
+</div>
+
+<!-- Marquee -->
+
+<div class='banner-top md:py-8 py-4' style="background:#FFE74D;">
+    <div class="marquee-block swiper-container flex items-center whitespace-nowrap">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class='heading5 md:px-[110px] px-12'>10% Discount on Products</div>
+            </div>
+            <div class="swiper-slide">
+                <div class='line w-8 h-px bg-black'></div>
+            </div>
+            <div class="swiper-slide">
+                <div class='heading5 md:px-[110px] px-12'>coupon code: save10</div>
+            </div>
+            <div class="swiper-slide">
+                <div class='line w-8 h-px bg-black'></div>
+            </div>
+            <div class="swiper-slide">
+                <div class='heading5 md:px-[110px] px-12'>Free delivery</div>
+            </div>
+            <div class="swiper-slide">
+                <div class='line w-8 h-px bg-black'></div>
+            </div>
+            <div class="swiper-slide">
+                <div class='heading5 md:px-[110px] px-12'>10% Discount on Products</div>
+            </div>
+            <div class="swiper-slide">
+                <div class='line w-8 h-px bg-black'></div>
+            </div>
+            <div class="swiper-slide">
+                <div class='heading5 md:px-[110px] px-12'>coupon code: save10</div>
+            </div>
+            <div class="swiper-slide">
+                <div class='line w-8 h-px bg-black'></div>
+            </div>
+            <div class="swiper-slide">
+                <div class='heading5 md:px-[110px] px-12'>Free delivery</div>
+            </div>
+            <div class="swiper-slide">
+                <div class='line w-8 h-px bg-black'></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Shop By Category -->
+<div class="banner-block pt-10 pb-10">
+    <div class="container-AllProducts">
+        <div class="heading flex flex-col items-center text-center">
+            <div class="heading3 pb-10">Shop By Category</div>
+            <div class="list-banner grid md:grid-cols-4 lg:gap-[30px] gap-[20px]">
+                <a href="" class="banner-item relative block duration-500 cursor-pointer">
+                    <div class="banner-img w-full rounded-2xl overflow-hidden">
+                        <img src='assets/images/banner/banner-furniture1.png' alt='bg-img' class='w-full duration-500'>
+                    </div>
+                    <div class="banner-content absolute left-[30px] bottom-[30px]">
+                        <div class="heading5">CCTV <br>Cameras</div>
+                        <div class="text-button text-black relative inline-block pb-1 border-b-2 border-black duration-500 mt-2">
+                            Shop Now
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="banner-item relative block duration-500 cursor-pointer">
+                    <div class="banner-img w-full rounded-2xl overflow-hidden">
+                        <img src='assets/images/banner/banner-furniture2.png' alt='bg-img' class='w-full duration-500'>
+                    </div>
+                    <div class="banner-content absolute left-[30px] bottom-[30px]">
+                        <div class="heading5">Laptop/ <br>PC</div>
+                        <div class="text-button text-black relative inline-block pb-1 border-b-2 border-black duration-500 mt-2">
+                            Shop Now
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="banner-item relative block duration-500 cursor-pointer">
+                    <div class="banner-img w-full rounded-2xl overflow-hidden">
+                        <img src='assets/images/banner/banner-furniture3.png' alt='bg-img' class='w-full duration-500'>
+                    </div>
+                    <div class="banner-content absolute left-[30px] bottom-[30px]">
+                        <div class="heading5">Software</div>
+                        <div class="text-button text-black relative inline-block pb-1 border-b-2 border-black duration-500 mt-2">
+                            Shop Now
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="banner-item relative block duration-500 cursor-pointer">
+                    <div class="banner-img w-full rounded-2xl overflow-hidden">
+                        <img src='assets/images/banner/banner-furniture4.png' alt='bg-img' class='w-full duration-500'>
+                    </div>
+                    <div class="banner-content absolute left-[30px] bottom-[30px]">
+                        <div class="heading5">Gaming <br>Accs.</div>
+                        <div class="text-button text-black relative inline-block pb-1 border-b-2 border-black duration-500 mt-2">
+                            Shop Now
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="list-banner grid md:grid-cols-4 lg:gap-[30px] gap-[20px] pt-7">
+                <a href="" class="banner-item relative block duration-500 cursor-pointer">
+                    <div class="banner-img w-full rounded-2xl overflow-hidden">
+                        <img src='assets/images/banner/banner-furniture5.png' alt='bg-img' class='w-full duration-500'>
+                    </div>
+                    <div class="banner-content absolute left-[30px] bottom-[30px]">
+                        <div class="heading5">Network <br>Accs.</div>
+                        <div class="text-button text-black relative inline-block pb-1 border-b-2 border-black duration-500 mt-2">
+                            Shop Now
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="banner-item relative block duration-500 cursor-pointer">
+                    <div class="banner-img w-full rounded-2xl overflow-hidden">
+                        <img src='assets/images/banner/banner-furniture6.png' alt='bg-img' class='w-full duration-500'>
+                    </div>
+                    <div class="banner-content absolute left-[30px] bottom-[30px]">
+                        <div class="heading5">Printers</div>
+                        <div class="text-button text-black relative inline-block pb-1 border-b-2 border-black duration-500 mt-2">
+                            Shop Now
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="banner-item relative block duration-500 cursor-pointer">
+                    <div class="banner-img w-full rounded-2xl overflow-hidden">
+                        <img src='assets/images/banner/banner-furniture7.png' alt='bg-img' class='w-full duration-500'>
+                    </div>
+                    <div class="banner-content absolute left-[30px] bottom-[30px]">
+                        <div class="heading5">Mobile <br>Accs.</div>
+                        <div class="text-button text-black relative inline-block pb-1 border-b-2 border-black duration-500 mt-2">
+                            Shop Now
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="banner-item relative block duration-500 cursor-pointer">
+                    <div class="banner-img w-full rounded-2xl overflow-hidden">
+                        <img src='assets/images/banner/banner-furniture8.png' alt='bg-img' class='w-full duration-500'>
+                    </div>
+                    <div class="banner-content absolute left-[30px] bottom-[30px]">
+                        <div class="heading5">Smart <br>Watches</div>
+                        <div class="text-button text-black relative inline-block pb-1 border-b-2 border-black duration-500 mt-2">
+                            Shop Now
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Trending/Best Seller -->
+@* <div class="tab-features-block filter-product-block md:pt-10 pt-10" style="background:#FFFBEE; border-radius:20px;">
+    <div class="container-fluid">
+        <div class="heading flex flex-col items-center text-center">
+            <div class="menu-tab rounded-2xl">
+                <div class="menu flex items-center gap-2 p-1">
+                    <div class="indicator absolute top-1 bottom-1 bg-white rounded-full shadow-md duration-300">
+                    </div>
+                    <div class="tab-item relative text-secondary heading5 py-2 px-5 cursor-pointer duration-500 hover:text-black active" data-item="trending products">
+                        Trending Products
+                    </div>
+                    <div class="tab-item relative text-secondary heading5 py-2 px-5 cursor-pointer duration-500 hover:text-black" data-item="Best Sellers">
+                        Best Sellers
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="list-product hide-product-sold grid sm:grid-cols-4 grid-cols-3 sm:gap-[30px] gap-[20px] mt-7 lg:grid-cols-4">
+            <div class="swiper-button-prev2 sm:left-10 left-6">
+                <i class="ph-bold ph-caret-left text-xl"></i>
+            </div>
+            @foreach (var item in ViewBag.trendingItem)
+            {
+                <div data-item="1" class="product-item grid-type pt-5">
+                    <div class="product-main cursor-pointer block" data-item="1">
+                        <div class="product-thumb bg-white relative overflow-hidden rounded-2xl" style="border: 1px solid #CCCCCC; border-radius:15px; width:234px; height:234px;">
+                            <div class="list-action-right absolute top-3 right-3 max-lg:hidden gap-1">
+                                <span class="add-wishlist-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-small duration-300">
+                                    <i class="ph ph-heart"></i>
+                                </span>
+                                <span class="add-btn w-10 h-10 bg-white flex items-center justify-center rounded-full box-shadow-small duration-300" style="margin-top: 120px;right: 6.2px;">
+                                    <img src="~/assets/images/plus.svg" alt="Add" class="default-img">
+                                    <img src="~/assets/images/plus-white.svg" alt="Add" class="hover-img">
+                                </span>
+                            </div>
+                            <div class="product-img w-full h-full aspect-[4/4]">
+                                <img key="0" class="w-full h-full object-cover duration-700" src="@ViewBag.ImageUrl@item.Image" alt="img" />
+                            </div>
+                        </div>
+                        <div class="product-name text-title duration-300 pt-4 text-limit" style="font-weight:500; font-size:16px">@item.Name</div>
+                        <div class="product-name text-title duration-300 pt-4 text-limit text-left" style="font-weight:600; font-size:17px">@item.Price BHD</div>
+                    </div>
+                </div>
+            }
+
+            <div class="swiper-button-next2 sm:right-10 right-6">
+                <i class="ph-bold ph-caret-right text-xl"></i>
+            </div>
+        </div>
+
+    </div>
+</div> *@
+
+<!-- Discount Banner Section -->
+<div class="banner-block md:pt-20 pt-5 pb-5">
+    <div class="container-AllProducts grid lg:grid-cols-3 sm:grid-cols-2 gap-[30px]">
+        <a href="" class="banner-ads-item bg-linear rounded-2xl relative overflow-hidden block cursor-pointer">
+            <img src="~/assets/images/banner/product deals banner1.png" />
+        </a>
+        <a href="shop-breadcrumb-img.html" class="banner-ads-item bg-linear rounded-2xl relative overflow-hidden block cursor-pointer">
+            <img src="~/assets/images/banner/product deals banner2.png" />
+        </a>
+        <a href="shop-breadcrumb-img.html" class="banner-ads-item bg-linear rounded-2xl relative overflow-hidden block cursor-pointer">
+            <img src="~/assets/images/banner/product deals banner3.png" />
+        </a>
+    </div>
+</div>
+
+<!-- Middle Banner Section -->
+<div class="flash-sale-block mt-10 relative">
+    <div class="">
+        <img src='assets/images/banner/Group1.png' alt='bg-img' class='w-full h-full object-cover'>
+    </div>
+</div>
+
+<!-- All Products -->
+<div class="what-new-block filter-product-block md:pt-20 pt-10">
+    <div class="container-AllProducts">
+        <div class="heading flex flex-col items-center text-center">
+            <div class="heading3">All Products</div>
+            <div class="menu-tab bg-surface rounded-2xl mt-6">
+                <div class="menu flex items-center gap-2 p-1">
+                    <div class="indicator absolute top-1 bottom-1 bg-white rounded-full shadow-md duration-300">
+                    </div>
+                    <div class="tab-item relative text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-300 hover:text-black @(selectedCategoryID == null ? "active" : "")" href="@Url.Action("Index", "Home")">
+                        ALL PRODUCTS
+                    </div>
+                    @foreach (var item in ViewBag.categorylist)
+                    {
+                        <a class="tab-item relative text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-300 hover:text-black @(selectedCategoryID == item.CategoryID ? "active" : "")" href="@Url.Action("Index", "Home", new { CategoryID = item.CategoryID })">
+                            @item.Name
+                        </a>
+                    }
+                    @* <div class="tab-item relative text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-300 hover:text-black active" href="@Url.Action("Index", "Home")">
+                    ALL PRODUCTS
+                    </div>
+                    @foreach (var item in ViewBag.categorylist)
+                    {
+                    <a class="tab-item relative text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-300 hover:text-black" href="@Url.Action("Index", "Home", new { CategoryID = item.CategoryID })">
+                    @item.Name
+                    </a>
+                    } *@
+                </div>
+            </div>
+        </div>
+        <div class="list-product hide-product-sold grid sm:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7 lg:grid-cols-5" style="text-align:-webkit-center">
+            @foreach (var item in ViewBag.items)
+            {
+                <div data-item="1" class="product-item grid-type pt-5">
+                    <div class="product-main cursor-pointer block" data-item="1">
+                        <div class="product-thumb bg-white relative overflow-hidden rounded-2xl">
+                            <div class="list-action-right absolute top-3 right-3 max-lg:hidden gap-1">
+                                <span class="add-wishlist-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-small duration-300 wl" onclick="addtoWishlist(@item.ItemID, '@item.Name', '@item.Image', @item.Price,@item.DiscountedPrice, 'Item', 1);">
+                                    <i class="ph ph-heart"></i> 
+                                </span>
+                                <span class="add-btn w-10 h-10 bg-white flex items-center justify-center rounded-full box-shadow-small duration-300 cart" onclick="addtocart(@item.ItemID, '@item.Name','@item.Image',@item.Price,@item.DiscountedPrice,'Item',1);" style="margin-top: 120px; right: 6.2px;">
+                                    <img src="~/assets/images/plus.svg" alt="Add" class="default-img">
+                                    <img src="~/assets/images/plus-white.svg" alt="Add" class="hover-img">
+                                </span>
+                            </div>
+                            <div class="product-img w-full h-full aspect-[3/4]">
+                                <img key="0" class="w-full h-full object-cover duration-700" src="@ViewBag.ImageUrl@item.Image" alt="img" />
+                            </div>
+                        </div>
+                        <div class="product-name text-title duration-300 pt-4 text-limit" style="font-weight:500; font-size:16px">@item.Name</div>
+                        <div class="product-name text-title duration-300 pt-4 text-limit text-left" style="font-weight:600; font-size:17px">@item.Price BHD</div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Earn With Your -->
+<div class="container-AllProducts pt-10">
+    <div class="">
+        <img src='assets/images/banner/Group2.png' alt='bg-img' class='w-full h-full object-cover'>
+    </div>
+</div>
+
+<!-- customerservice -->
+<div class='benefit-block md:pb-10 pb-10'>
+    <div class="container-AllProducts">
+        <div class="list-benefit grid items-start lg:grid-cols-4 grid-cols-2 gap-[30px]">
+            <div class="benefit-item flex flex-col items-center justify-center">
+                <i class="icon-phone-call lg:text-7xl text-5xl">
+                    <img src="~/assets/images/logo/customerservice.png" />
+                </i>
+                <div class="heading6 text-center mt-5">24/7 Customer Service</div>
+                @*<div class="caption1 text-secondary text-center mt-3">
+                We're here to help you with any questions or <br />
+                concerns you have, 24/7.
+                </div> *@
+            </div>
+            <div class="benefit-item flex flex-col items-center justify-center">
+                <i class="icon-return lg:text-7xl text-5xl">
+                    <img src="~/assets/images/logo/moneyback.svg" />
+                </i>
+                <div class="heading6 text-center mt-10">Same-Day Delivery</div>
+                @* <div class="caption1 text-secondary text-center mt-3">
+                If you're not satisfied with your purchase, <br />
+                simply return it within 14 days for a refund.
+                </div> *@
+            </div>
+            <div class="benefit-item flex flex-col items-center justify-center">
+                <i class="icon-guarantee lg:text-7xl text-5xl">
+                    <img src="~/assets/images/logo/guarantee.png" />
+                </i>
+                <div class="heading6 text-center mt-5">Our Guarantee</div>
+                @* <div class="caption1 text-secondary text-center mt-3">
+                We stand behind our products and services and <br />
+                guarantee your satisfaction.
+                </div> *@
+            </div>
+            <div class="benefit-item flex flex-col items-center justify-center">
+                <i class="icon-delivery-truck lg:text-7xl text-5xl">
+                    <img src="~/assets/images/logo/shipping.png" />
+                </i>
+                <div class="heading6 text-center mt-5">Shipping All Over In Bahrain</div>
+                @* <div class="caption1 text-secondary text-center mt-3">
+                We ship our products worldwide, making them <br />
+                accessible to customers everywhere.
+                </div> *@
+            </div>
+        </div>
+    </div>
+</div>

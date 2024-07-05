@@ -1,0 +1,378 @@
+﻿@{
+    ViewData["Title"] = "Service";
+}
+<style>
+    .PopularService-container {
+        border-radius: 30px;
+        background: linear-gradient(to right, #EFD74A, #F9444B, #2AA1FB, #14E4AB);
+        padding: 2px;
+    }
+
+    .PopularService-Circle {
+        border: none;
+        border-radius: 30px;
+        padding: 28px 28px;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .bg-img {
+        height: 219px;
+    }
+
+    @@media only screen and (max-width: 600px) {
+        .bg-img {
+            height: 155px;
+        }
+    }
+
+    .btn-primary {
+        background: #04385F;
+        color: white;
+        padding: 8px 22px;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+        margin-left: -10px;
+    }
+
+    .text-limit {
+        display: block;
+        width: 235px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .product-thumb {
+        border: 1px solid #CCCCCC;
+        border-radius: 15px;
+        width: 234px;
+        height: 234px;
+    }
+
+    @@media only screen and (max-width: 600px) {
+        .product-thumb {
+            border: 1px solid #CCCCCC;
+            border-radius: 15px;
+            width: 175px;
+            height: 175px;
+        }
+
+        .text-limit {
+            display: block;
+            width: 170px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .main-bg {
+            height: 160px !important;
+        }
+
+        .main-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .text-sub-display {
+            font-size: 8px !important;
+            line-height: 16px;
+            letter-spacing: 1.1px;
+        }
+    }
+</style>
+<div class="breadcrumb-block style-shared">
+    <div class="breadcrumb-main overflow-hidden" style="background: url('assets/images/Service-main-bg.png'); background-size:cover; margin-top:5rem;height: 340px;">
+        <div class="container lg:pt-[134px] pt-24 pb-10 relative">
+            <div class="main-content w-full h-full flex flex-col items-center justify-center relative z-[1]">
+                @*<div class="text-content">
+                <div class="heading2 text-center">About Us</div>
+                <div class="link flex items-center justify-center gap-1 caption1 mt-3">
+                <a href='@Url.Action("Index","Home")'>Homepage</a>
+                <i class="ph ph-caret-right text-sm text-secondary2"></i>
+                <div class='text-secondary2 capitalize'>About Us</div>
+                </div>
+                </div>*@
+            </div>
+        </div>
+    </div>
+</div>
+<div class="trending-block style-six md:pt-10 pt-10 pb-10">
+    <div class="container-AllProducts">
+        <div class="heading3 text-center">
+            Service Categories
+        </div>
+        <div class="list-trending relative section-swiper-navigation style-small-border style-outline md:mt-10 mt-6">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper swiper-list-trending h-full relative">
+                <div class="swiper-wrapper">
+                    @foreach (var item in ViewBag.serviceCategory)
+                    {
+                        <div class="swiper-slide">
+                            <a href="@Url.Action("Service", "Home", new { ServiceCategoryID = item.ServiceCategoryID })" class="trending-item block relative cursor-pointer">
+                                <div class="PopularService-container">
+                                    <div class="bg-img rounded-full overflow-hidden PopularService-Circle">
+                                        <img src="@ViewBag.ImageUrl@item.Image" alt="@item.Name" class='w-full'>
+                                        @* <img src='assets/images/collection/category-organic1.png' alt='outerwear' class='w-full'> *@
+                                    </div>
+                                </div>
+                                <div class="trending-name text-center mt-5 duration-500">
+                                    <span class='heading5'>@item.Name</span>
+                                    @* <span class='text-secondary'> (12)</span> *@
+                                </div>
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Section -->
+<div class="shop-product breadcrumb1 lg:py-10 md:py-14 py-0">
+    <div class="container-AllProducts pt-10">
+        <div class="flex max-md:flex-wrap max-md:flex-col-reverse gap-y-8">
+            <div class='sidebar lg:w-1/4 md:w-1/3 w-full md:pr-12'>
+                <div class="filter-type-block pb-8 border-b border-line">
+                    <div class="heading6">Search Service</div>
+                    <div class="select-block relative pt-4">
+                        <input id="select-filter" name="select-filter" class='caption1 py-2 pl-3 md:pr-20 pr-10 rounded-lg border border-line' />
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+                <div class="filter-type-block pb-8 border-b border-line  mt-8">
+                    <div class="heading6">Service Categories</div>
+                    <div class="list-type filter-type menu-tab mt-4">
+                        @foreach (var item in ViewBag.CatCount)
+                        {
+                            <a class='item tab-item flex items-center justify-between cursor-pointer' data-item="t-shirt" href="@Url.Action("Service", "Home", new { ServiceCategoryID = item.ServiceCategoryID })">
+                                <div class='type-name text-secondary has-line-before hover:text-black capitalize'>
+                                    @item.Name
+                                </div>
+                                <div class='text-secondary2 number'>
+                                    @item.CatCount
+                                </div>
+                            </a>
+                        }
+                    </div>
+                </div>
+                <div class="filter-brand pb-8 mt-8">
+                    <div class="heading6">Best Services</div>
+                    <div class="list-brand mt-4" style="background:#f5f5f5;padding: 10px;">
+                        @foreach (var item in ViewBag.service)
+                        {
+                            <div class="brand-item flex items-center justify-between" data-item="adidas">
+                                <div class="left flex items-center cursor-pointer">
+
+                                    <div class="" style="background: white; border: 1px solid, #f5f5f5; border-radius: 5px;">
+                                        <img src='@ViewBag.ImageUrl@item.Image' alt='bg-img' class='w-20 h-20 object-cover'>
+                                    </div>
+                                    <div class="product-infor mt-4 lg:mb-7 pl-2">
+                                        <div class="product-name text-title duration-300">
+                                            @item.Name
+                                        </div>
+
+                                        <div class="product-price-block flex items-center gap-2 flex-wrap mt-1 duration-300 relative z-[1]">
+                                            <div class="product-price text-title">
+                                                BHD @item.Price
+                                            </div>
+                                            <div class="product-origin-price caption1 text-secondary2">
+                                                <del>BHD @item.DiscountedPrice</del>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    @* <div class="product-name text-title duration-300">
+                                @item.Name
+                                </div>
+                                <div class="product-price-block flex items-center gap-2 flex-wrap mt-1 duration-300 relative z-[1]">
+                                <div class="product-price text-title">
+                                BHD @item.Price
+                                </div>
+                                <div class="product-origin-price caption1 text-secondary2">
+                                <del>BHD @item.DiscountedPrice</del>
+                                </div>
+                                </div> *@
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="list-product-block style-grid lg:w-3/4 md:w-2/3 w-full md:pl-3 md:pb-20 pb-10">
+                <div class="filter-heading flex items-center justify-between gap-5 flex-wrap">
+                    <div class="left flex has-line items-center flex-wrap gap-5">
+                        <div class="choose-layout menu-tab flex items-center gap-2">
+                            <div class='item tab-item style-grid three-col p-2 border border-line rounded flex items-center
+                                    justify-center cursor-pointer active'>
+                                <div class='flex items-center gap-0.5'>
+                                    <span class='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                    <span class='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                    <span class='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                </div>
+                            </div>
+                            <div class="item tab-item style-list row w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer">
+                                <div class='flex flex-col items-center gap-0.5'>
+                                    <span class='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
+                                    <span class='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
+                                    <span class='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sort-product right flex items-center gap-3">
+                        <label for='select-filter' class="caption1 capitalize">Sort by</label>
+                        <div class="select-block relative">
+                            <select id="select-filter" name="select-filter" class='caption1 py-2 pl-3 md:pr-20 pr-10 rounded-lg border border-line'>
+                                <option value="Sorting">Sorting</option>
+                                <option value="soldQuantityHighToLow">Best Selling</option>
+                                <option value="discountHighToLow">Best Discount</option>
+                                <option value="priceHighToLow">Price High To Low</option>
+                                <option value="priceLowToHigh">Price Low To High</option>
+                            </select>
+                            <i class='ph ph-caret-down absolute top-1/2 -translate-y-1/2 md:right-4 right-2'></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-filtered flex items-center gap-3 flex-wrap">
+                </div>
+                <div class="hide-product-sold grid sm:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7 lg:grid-cols-5" style="text-align:-webkit-center;">
+                    @foreach (var item in ViewBag.service)
+                    {
+                        <div data-item="1" class="product-item grid-type pt-5">
+                            <div class="product-main cursor-pointer block" data-item="1">
+                                <div class="product-thumb bg-white relative overflow-hidden rounded-2xl">
+                                    <div class="list-action-right absolute top-3 right-3 max-lg:hidden gap-1">
+                                        <span class="add-wishlist-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-small duration-300">
+                                            <i class="ph ph-heart"></i>
+                                        </span>
+                                        <span class="add-btn w-10 h-10 bg-white flex items-center justify-center rounded-full box-shadow-small duration-300" style="margin-top: 120px; right: 6.2px;">
+                                            <img src="~/assets/images/plus.svg" alt="Add" class="default-img">
+                                            <img src="~/assets/images/plus-white.svg" alt="Add" class="hover-img">
+                                        </span>
+                                    </div>
+                                    <div class="product-img w-full h-full aspect-[3/4]">
+                                        <img key="0" class="w-full h-full object-cover duration-700" src="@ViewBag.ImageUrl@item.Image" alt="img" />
+                                    </div>
+                                </div>
+                                <div class="product-name text-title duration-300 pt-4 text-limit text-left" style="font-weight:500; font-size:16px">@item.Name</div>
+                                <div class="product-name text-title duration-300 pt-4 text-limit text-left" style="font-weight:600; font-size:17px">@item.Price BHD</div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div class="list-pagination w-full flex items-center gap-4 mt-10"></div>
+
+
+                <div class="container grid sm:grid-cols-2 gap-5">
+                    @foreach (var item in ViewBag.serviceBanner)
+                    {
+                        @* <a href="" class="banner-ads-item bg-linear rounded-2xl relative overflow-hidden block cursor-pointer" style="background-image:url('@ViewBag.ImageUrl@item.Image'); background-size:cover;"></a> *@
+                        <a href="@Url.Action("Service", "Home", new { ServiceID = item.ServiceID })" class="banner-item relative block rounded-[20px] overflow-hidden duration-500">
+                            <div class="banner-img w-full h-full">
+                                <img src='@ViewBag.ImageUrl@item.Image' alt='bg-img' class='w-full h-full object-cover duration-500'>
+                            </div>
+                            <div class="text-content xl:py-0 md:py-4 absolute top-1/2 left-8 -translate-y-1/2 text-white">
+                                <div class="heading2 mt-3" style="width: 90%;">@item.Title</div>
+                                <div class="heading4 font-bold mt-1">@item.Description</div>
+                                <div class="button-shop mt-5">Shop Now</div>
+                            </div>
+                        </a>
+                    }
+                    @* <a href='' class="banner-item relative block overflow-hidden rounded-2xl duration-500">
+                    <div class="banner-img">
+                    <img src='assets/images/banner/deal_banner2.png' class='duration-1000' alt='img'>
+                    </div>
+                    </a>
+                    <a href='' class="banner-item relative block overflow-hidden rounded-2xl duration-500">
+                    <div class="banner-img">
+                    <img src='assets/images/banner/deal_banner3.png' class='duration-1000' alt='img'>
+                    </div>
+                    </a> *@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Marquee -->
+<div class='banner-top md:py-8 py-4' style="background:#13E1A8">
+    <div class="marquee-block swiper-container flex items-center whitespace-nowrap">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class='heading5 md:px-[110px] px-12'>20% Discount on Service</div>
+            </div>
+            <div class="swiper-slide">
+                <div class='line w-8 h-px bg-black'></div>
+            </div>
+            <div class="swiper-slide">
+                <div class='heading5 md:px-[110px] px-12'>Expert IT Engineers</div>
+            </div>
+            <div class="swiper-slide">
+                <div class='line w-8 h-px bg-black'></div>
+            </div>
+            <div class="swiper-slide">
+                <div class='heading5 md:px-[110px] px-12'>Same-Day-Service</div>
+            </div>
+            <div class="swiper-slide">
+                <div class='line w-8 h-px bg-black'></div>
+            </div>
+            <div class="swiper-slide">
+                <div class='heading5 md:px-[110px] px-12'>20% Discount on Service</div>
+            </div>
+            <div class="swiper-slide">
+                <div class='line w-8 h-px bg-black'></div>
+            </div>
+            <div class="swiper-slide">
+                <div class='heading5 md:px-[110px] px-12'>Expert IT Engineers</div>
+            </div>
+            <div class="swiper-slide">
+                <div class='line w-8 h-px bg-black'></div>
+            </div>
+            <div class="swiper-slide">
+                <div class='heading5 md:px-[110px] px-12'>Same-Day-Service</div>
+            </div>
+            <div class="swiper-slide">
+                <div class='line w-8 h-px bg-black'></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Service Deal -->
+<div class="banner-block style-one md:pt-10 pt-10 md:pb-20" style="padding-bottom: 75px;">
+    <div class="heading3 text-center pb-5">
+        Service Deals
+    </div>
+    <div class="container-AllProducts grid sm:grid-cols-2 gap-5">
+
+        <a href='' class="banner-item relative block overflow-hidden rounded-2xl duration-500">
+            <div class="banner-img">
+                <img src='assets/images/banner/refer.png' class='duration-1000' alt='img'>
+            </div>
+        </a>
+        <a href='' class="banner-item relative block overflow-hidden rounded-2xl duration-500">
+            <div class="banner-img">
+                <img src='assets/images/banner/E-Commerce.png' class='duration-1000' alt='img'>
+            </div>
+        </a>
+    </div>
+</div>
+
+<!-- Middle Banner Section -->
+<div class="flash-sale-block relative" style="margin-top: -50px;">
+    <div class="">
+        <img src='assets/images/banner/Group1.png' alt='bg-img' class='w-full h-full object-cover'>
+    </div>
+</div>
+
+<!-- Earn With Your -->
+<div class="container-AllProducts pt-10">
+    <div class="">
+        <img src='assets/images/banner/Group2.png' alt='bg-img' class='w-full h-full object-cover'>
+    </div>
+</div>

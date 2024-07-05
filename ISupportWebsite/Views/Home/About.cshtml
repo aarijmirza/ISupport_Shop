@@ -1,0 +1,109 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+<div class="breadcrumb-block style-shared">
+    <div class="breadcrumb-main overflow-hidden" style="background: url('assets/images/AboutUs_bg.png'); background-size:cover; margin-top:5rem;height: 340px;">
+        <div class="container lg:pt-[134px] pt-24 pb-10 relative">
+            <div class="main-content w-full h-full flex flex-col items-center justify-center relative z-[1]">
+                <div class="text-content">
+                    <div class="heading2 text-center">About Us</div>
+                    <div class="link flex items-center justify-center gap-1 caption1 mt-3">
+                        <a href='@Url.Action("Index","Home")'>Homepage</a>
+                        <i class="ph ph-caret-right text-sm text-secondary2"></i>
+                        <div class='text-secondary2 capitalize'>About Us</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class='about md:pt-20 pt-10' style="background:url('/assets/images/About_1.png')">
+    <div class="about-us-block">
+        <div class="container">
+            <div class="text flex items-center justify-center">
+                <div class="content md:w-5/6 w-full">
+                    <div class="heading3 text-center">
+                        Book IT Services and Shop <br /> Products Effortlessly on <span style="background: linear-gradient(to right,#EFD74A, #F9444B, #2AA1FB, #14E4AB); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">iSupport</span>
+                    </div>
+                    <div class="body1 text-center md:mt-7 mt-5" style="style=" font-size:18px; font-weight:400"">
+                        Welcome to iSupport, your premier destination for expert IT services and a wide selection of IT products, all <br /> delivered right to your doorstep. Our platform is dedicated to simplifying your IT experience with seamless <br /> booking, efficient service delivery, and a diverse range of products.
+                        <br />
+                        <br /> Whether you need troubleshooting, maintenance, or advanced technical support, our team of experienced <br /> engineers ensures your technology operates flawlessly. At iSupport, we're committed to combining service <br /> excellence with convenience, offering reliable solutions and quality products tailored to meet all your IT <br /> needs effortlessly.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="display:flex">
+        <img src="~/assets/images/lines.png" width="40%" />
+        <img src="~/assets/images/about_man.png" style="padding-top: 30px;width:20%" />
+    </div>
+    <div class="row" style="text-align: -webkit-center; display: ruby-text; padding-bottom: 75px;">
+        <img src="~/assets/images/Apple_white.png" width="7%"/>
+        <img src="~/assets/images/Google_white.png" width="7%" />
+    </div>
+</div>
+
+<!-- Middle Banner Section -->
+<div class="flash-sale-block relative" style="margin-top: -50px;">
+    <div class="">
+        <img src='assets/images/banner/Group1.png' alt='bg-img' class='w-full h-full object-cover'>
+    </div>
+</div>
+
+<!-- Earn With Your -->
+<div class="container-AllProducts pt-10">
+    <div class="">
+        <img src='assets/images/banner/Group2.png' alt='bg-img' class='w-full h-full object-cover'>
+    </div>
+</div>
+
+<!-- customerservice -->
+<div class='benefit-block md:pb-10 pb-10'>
+    <div class="container-AllProducts">
+        <div class="list-benefit grid items-start lg:grid-cols-4 grid-cols-2 gap-[30px]">
+            <div class="benefit-item flex flex-col items-center justify-center">
+                <i class="icon-phone-call lg:text-7xl text-5xl">
+                    <img src="~/assets/images/logo/customerservice.png" />
+                </i>
+                <div class="heading6 text-center mt-5">24/7 Customer Service</div>
+                @*<div class="caption1 text-secondary text-center mt-3">
+                We're here to help you with any questions or <br />
+                concerns you have, 24/7.
+                </div> *@
+            </div>
+            <div class="benefit-item flex flex-col items-center justify-center">
+                <i class="icon-return lg:text-7xl text-5xl">
+                    <img src="~/assets/images/logo/moneyback.svg" />
+                </i>
+                <div class="heading6 text-center mt-10">Same-Day Delivery</div>
+                @* <div class="caption1 text-secondary text-center mt-3">
+                If you're not satisfied with your purchase, <br />
+                simply return it within 14 days for a refund.
+                </div> *@
+            </div>
+            <div class="benefit-item flex flex-col items-center justify-center">
+                <i class="icon-guarantee lg:text-7xl text-5xl">
+                    <img src="~/assets/images/logo/guarantee.png" />
+                </i>
+                <div class="heading6 text-center mt-5">Our Guarantee</div>
+                @* <div class="caption1 text-secondary text-center mt-3">
+                We stand behind our products and services and <br />
+                guarantee your satisfaction.
+                </div> *@
+            </div>
+            <div class="benefit-item flex flex-col items-center justify-center">
+                <i class="icon-delivery-truck lg:text-7xl text-5xl">
+                    <img src="~/assets/images/logo/shipping.png" />
+                </i>
+                <div class="heading6 text-center mt-5">Shipping All Over In Bahrain</div>
+                @* <div class="caption1 text-secondary text-center mt-3">
+                We ship our products worldwide, making them <br />
+                accessible to customers everywhere.
+                </div> *@
+            </div>
+        </div>
+    </div>
+</div>
