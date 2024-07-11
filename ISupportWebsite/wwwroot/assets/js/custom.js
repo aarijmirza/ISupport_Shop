@@ -520,89 +520,89 @@ function removeWishlistitem(ele) {
     GetWishListItems();
     topwishlist();
 }
-function GetWishListItems() {
-    debugger
-    var currency = localStorage.getItem("currency");
-    var total = 0;
-    var chkLSWishlist = localStorage.getItem("_Wishlistitems");
-    var data = JSON.parse(chkLSWishlist);
-    var html = '';
-    var totalPrice = 0;
-    var totalQty = 0;
+//function GetWishListItems() {
+//    debugger
+//    var currency = localStorage.getItem("currency");
+//    var total = 0;
+//    var chkLSWishlist = localStorage.getItem("_Wishlistitems");
+//    var data = JSON.parse(chkLSWishlist);
+//    var html = '';
+//    var totalPrice = 0;
+//    var totalQty = 0;
 
-    for (var i = 0; i < data.length; i++) {
-        totalQty += Number(data[i].Qty);
-        //totalPrice += data[i].Price;
-        if (data[i].DiscountedPrice == 0 || (data[i].DiscountedPrice == null)) {
-            totalPrice += data[i].Qty * data[i].Price;
-        }
-        else {
-            totalPrice += data[i].Qty * data[i].DiscountedPrice;
-        }
-        html += '<tr>'
-        if (data[i].Type == "Item") {
-            if (data[i].Image == "" || data[i].Image == null) {
-                html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="wishlist-img" src="/Content/assets/images/NA.png" alt=""></a></td>'
-            }
-            else {
-                html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="wishlist-img" src="https://admin.isupportbh.com/' + data[i].Image + '" alt=""></a></td>'
-            }
-        }
-        else {
-            if (data[i].Image == "" || data[i].Image == null) {
-                html += '<td class="plantmore-product-thumbnail"><a href="/Product/ServiceDetails?ServiceID=' + data[i].ServiceID + '"><img class="wishlist-img" src="/Content/assets/images/NA.png" alt=""></a></td>'
-            }
-            else {
-                html += '<td class="plantmore-product-thumbnail"><a href="/Product/ServiceDetails?ServiceID=' + data[i].ServiceID + '"><img class="wishlist-img" src="https://admin.isupportbh.com/' + data[i].Image + '" alt=""></a></td>'
-            }
-        }
-        if (data[i].Type == "Item") {
-            if (data[i].DiscountedPrice == 0 || (data[i].DiscountedPrice == null)) {
-                html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
-                    + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
-                    + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Type + '</span></td>'
-                    + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '">Add to Cart</a></td>'
-                    + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;">Remove</a></td>'
-                    + '</tr>'
-            }
-            else {
-                html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
-                    + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].DiscountedPrice.toFixed(2) + '</span></td>'
-                    + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Type + '</span></td>'
-                    + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '">Add to Cart</a></td>'
-                    //+ "<td class='plantmore-product-add-cart'><a href='#' class='addItemLS ' onclick='addtocart("+data[i].ItemID+","+data[i].Title+"','"+ data[i].Image +"',"+ data[i].Price +",1);toast('Item Added to Cart', 1); return false;'>add to cart</a></td>"
-                    + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;">Remove</a></td>'
-                    + '</tr>'
-            }
-        }
-        else {
-            if (data[i].DiscountedPrice == 0 || (data[i].DiscountedPrice == null)) {
-                html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
-                    + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
-                    + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Type + '</span></td>'
-                    + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Service/ServiceDetails?ServiceID=' + data[i].ServiceID + '">Add to Cart</a></td>'
-                    + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;"><i class="h5 ion-trash-a mb-0"></i></a></td>'
-                    + '</tr>'
-            }
-            else {
-                html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
-                    + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].DiscountedPrice.toFixed(2) + '</span></td>'
-                    + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Type + '</span></td>'
-                    + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Service/ServiceDetails?ServiceID=' + data[i].ServiceID + '">Add to Cart</a></td>'
-                    + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;"><i class="h5 ion-trash-a mb-0"></i></a></td>'
-                    + '</div>'
-            }
-        }
-    }
-    if (data.length > 0) {
-        $(".wishlist-items").html(html);
-    }
-    else {
-        $("#ytdTable").html("No product in wishlist");
-    }
+//    for (var i = 0; i < data.length; i++) {
+//        totalQty += Number(data[i].Qty);
+//        //totalPrice += data[i].Price;
+//        if (data[i].DiscountedPrice == 0 || (data[i].DiscountedPrice == null)) {
+//            totalPrice += data[i].Qty * data[i].Price;
+//        }
+//        else {
+//            totalPrice += data[i].Qty * data[i].DiscountedPrice;
+//        }
+//        html += '<tr>'
+//        if (data[i].Type == "Item") {
+//            if (data[i].Image == "" || data[i].Image == null) {
+//                html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="wishlist-img" src="/Content/assets/images/NA.png" alt=""></a></td>'
+//            }
+//            else {
+//                html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="wishlist-img" src="https://admin.isupportbh.com/' + data[i].Image + '" alt=""></a></td>'
+//            }
+//        }
+//        else {
+//            if (data[i].Image == "" || data[i].Image == null) {
+//                html += '<td class="plantmore-product-thumbnail"><a href="/Product/ServiceDetails?ServiceID=' + data[i].ServiceID + '"><img class="wishlist-img" src="/Content/assets/images/NA.png" alt=""></a></td>'
+//            }
+//            else {
+//                html += '<td class="plantmore-product-thumbnail"><a href="/Product/ServiceDetails?ServiceID=' + data[i].ServiceID + '"><img class="wishlist-img" src="https://admin.isupportbh.com/' + data[i].Image + '" alt=""></a></td>'
+//            }
+//        }
+//        if (data[i].Type == "Item") {
+//            if (data[i].DiscountedPrice == 0 || (data[i].DiscountedPrice == null)) {
+//                html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
+//                    + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
+//                    + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Type + '</span></td>'
+//                    + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '">Add to Cart</a></td>'
+//                    + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;">Remove</a></td>'
+//                    + '</tr>'
+//            }
+//            else {
+//                html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
+//                    + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].DiscountedPrice.toFixed(2) + '</span></td>'
+//                    + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Type + '</span></td>'
+//                    + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '">Add to Cart</a></td>'
+//                    //+ "<td class='plantmore-product-add-cart'><a href='#' class='addItemLS ' onclick='addtocart("+data[i].ItemID+","+data[i].Title+"','"+ data[i].Image +"',"+ data[i].Price +",1);toast('Item Added to Cart', 1); return false;'>add to cart</a></td>"
+//                    + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;">Remove</a></td>'
+//                    + '</tr>'
+//            }
+//        }
+//        else {
+//            if (data[i].DiscountedPrice == 0 || (data[i].DiscountedPrice == null)) {
+//                html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
+//                    + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
+//                    + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Type + '</span></td>'
+//                    + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Service/ServiceDetails?ServiceID=' + data[i].ServiceID + '">Add to Cart</a></td>'
+//                    + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;"><i class="h5 ion-trash-a mb-0"></i></a></td>'
+//                    + '</tr>'
+//            }
+//            else {
+//                html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
+//                    + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].DiscountedPrice.toFixed(2) + '</span></td>'
+//                    + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Type + '</span></td>'
+//                    + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Service/ServiceDetails?ServiceID=' + data[i].ServiceID + '">Add to Cart</a></td>'
+//                    + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;"><i class="h5 ion-trash-a mb-0"></i></a></td>'
+//                    + '</div>'
+//            }
+//        }
+//    }
+//    if (data.length > 0) {
+//        $(".wishlist-items").html(html);
+//    }
+//    else {
+//        $("#ytdTable").html("No product in wishlist");
+//    }
 
 
-};
+//};
 
 function StockActiveColor() {
 

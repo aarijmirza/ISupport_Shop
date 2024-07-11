@@ -40,6 +40,133 @@
 /* custom-swiper */
 @import url("../css2");
 
+/*Bootstrap class*/
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+    .row > * {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-top: var(--bs-gutter-y);
+    }
+
+.col {
+    flex: 1 0 0%;
+}
+
+.row-cols-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+}
+
+.row-cols-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.row-cols-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+.row-cols-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+}
+
+.row-cols-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+.row-cols-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+}
+
+.row-cols-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+}
+
+.col-auto {
+    flex: 0 0 auto;
+    width: auto;
+}
+
+.col-1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+}
+
+.col-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+}
+
+.col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+.col-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+}
+
+.col-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+}
+
+.col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+.col-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+}
+
+.col-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+}
+
+.col-9 {
+    flex: 0 0 auto;
+    width: 75%;
+}
+
+.col-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+}
+
+.col-11 {
+    flex: 0 0 auto;
+    width: 91.66666667%;
+}
+
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+/*Bootstrap class*/
+
 .swiper.overflow-unset {
     overflow: unset;
 }
@@ -594,6 +721,7 @@ textarea {
     font-weight: 600;
     text-transform: uppercase;
     color: #094E81;
+    border: 1px solid, #094E81;
     background-color: var(--white);
     padding: 16px 40px;
     border-radius: 12px;
@@ -2193,7 +2321,7 @@ textarea {
         left: 0;
         width: 0;
         height: 1px;
-        background-color: var(--black);
+        /*background-color: var(--black);*/
         transition: all ease 0.3s;
     }
 
@@ -4887,3 +5015,89 @@ textarea {
 }
 
 /*# sourceMappingURL=output-scss.css.map */
+.btn-submit {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    background-color: #F9444B;
+    padding: 10px 18px;
+    border-radius: 25px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all ease 0.4s;
+    border: 1px solid, white;
+}
+
+    .btn-submit:hover {
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: #094E81;
+        transition: all ease 0.4s;
+        border: 1px solid, #FFFFFF;
+        padding: 10px 18px;
+    }
+
+.btn-consultancy {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #1F1F1F;
+    background-color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all ease 0.4s;
+    border: 1px solid, #1F1F1F;
+}
+
+    .btn-consultancy:hover {
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: #F9444B;
+        transition: all ease 0.4s;
+        border: 1px solid, #F9444B;
+    }
+
+.popup {
+    display: none;
+    position: fixed;
+    padding: 0px 0px 15px 0px;
+    width: 768px;
+    left: 40%;
+    margin-left: -150px;
+    height: auto;
+    top: 25%;
+    margin-top: -100px;
+    background: #FFF;
+    border: 1px solid #094E81;
+    z-index: 20;
+    border-radius: 15px;
+}
+
+#popup:after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: -2;
+    border-radius: 15px;
+}
+
+#popup:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #FFF;
+    z-index: -1;
+    border-radius: 15px;
+}

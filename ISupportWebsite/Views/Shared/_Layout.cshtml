@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="~/dist/output-tailwind.css" asp-append-version="true" />
     <script src="~/assets/js/jquery.min.js"></script>
     <script src="~/assets/js/custom.js"></script>
+    <style>
+     
+    </style>
 </head>
+
 <body>
     <div id="top-nav" class='top-nav style-one bg-black md:h-[44px] h-[30px]' style="background:#04385F">
         <div class="container mx-auto h-full">
@@ -59,14 +63,14 @@
                                         About Us
                                     </a>
                                 </li>
-                                <li class='h-full'>
-                                    <a href="#!" class='button-submit text-white uppercase'>
-                                        Submit Request
+                                <li class='h-full pt-3'>
+                                    <a class='btn-submit' onclick="show('popup')">
+                                        SUBMIT REQUEST
                                     </a>
                                 </li>
-                                <li class='h-full'>
-                                    <a href="#!" class='button-consultancy text-black uppercase'>
-                                        Consultancy
+                                <li class='h-full pt-3'>
+                                    <a class='btn-consultancy'>
+                                        CONSULTANCY
                                     </a>
                                 </li>
                             </ul>
@@ -982,6 +986,7 @@
 
     <a class="scroll-to-top-btn" href="#top-nav"><i class="ph-bold ph-caret-up"></i></a>
 
+
     <!-- GetButton.io widget -->
     <script type="text/javascript">
         (function () {
@@ -1000,22 +1005,75 @@
         })();
     </script>
     <!-- /GetButton.io widget -->
-
     <script>
         function tiktokClick() {
             window.open("https://www.tiktok.com/@@isupport.bh", "_blank");
         }
+    </script>
 
-        window.onscroll = function () { myFunction() };
-        var header = document.getElementById("Head");
-        var sticky = header.offsetTop;
-        function myFunction() {
-            if (window.pageYOffset > sticky) {
-                header.classList.add("nav-fixed-top");
-            } else {
-                header.classList.remove("nav-fixed-top");
-            }
+    <div class="popup" id="popup">
+        <div id="top-nav" class='top-nav style-one bg-black md:h-[44px] h-[30px]' style="background:#04385F; border-top-left-radius:15px; border-top-right-radius:15px;">
+            <div class="container mx-auto h-full">
+                <div class="top-nav-main max-md:justify-center h-full" style="align-content:center">
+                    <div class="text-center text-button-uppercase text-white items-center">
+                        SUBMIT REQUEST
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-AllProducts mx-auto h-full" style="background:#F3F3F3; color:#464646; padding: 10px; width: 90%; margin-top: 20px;">
+            <div class="text-center items-center">
+                “We love solving problems and exceeding your expectations”
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label>Request Title</label>
+                <input type="text" class="form-control" name="RequestTitle" />
+            </div>
+            <div class="col-6">
+                <label>Request Title</label>
+                <input type="text" class="form-control" name="RequestTitle" />
+            </div>
+        </div>
+    </div>
+    <p>This is a popup!</p>
+    <p>Overlay uses <b>:before</b> and <b>:after</b> pseudo-classes.</p>
+    <p>Website will still remain visible behind this popup.</p>
+    <a href="#" onclick="hide('popup')">Close</a>
+    </div>
+    <script>
+        var $ = function (id) {
+            return document.getElementById(id);
         }
+
+        var show = function (id) {
+            $(id).style.display = 'block';
+        }
+
+        var hide = function (id) {
+            $(id).style.display = 'none';
+        }
+
+        document.getElementById('show').addEventListener('click', function () {
+            show('popup');
+            hide('show');
+        });
+
+        document.getElementById('close').addEventListener('click', function () {
+            hide('popup');
+            show('show');
+        });
+
+        document.addEventListener('click', function (event) {
+            var formContainer = document.getElementById('popup');
+            var showButton = document.getElementById('show');
+
+            if (!formContainer.contains(event.target) && event.target !== showButton) {
+                hide('popup');
+                show('show');
+            }
+        });
     </script>
 
     <!-- Modal -->
@@ -1544,87 +1602,6 @@
 
     <div class='modal-cart-block'>
         <div class='modal-cart-main flex'>
-            <div class="left w-1/2 border-r border-line py-6 max-md:hidden">
-                <div class="heading5 px-6 pb-3">You May Also Like</div>
-                <div class="list px-6">
-                    <div class='product-item item py-5 flex items-center justify-between gap-3 border-b border-line' data-item="1">
-                        <div class="infor flex items-center gap-5">
-                            <div class="bg-img">
-                                <img src='assets/images/product/fashion/1-2.png' alt='img' class='w-[100px] aspect-square flex-shrink-0 rounded-lg'>
-                            </div>
-                            <div class=''>
-                                <div class="name text-button">Faux-leather trousers</div>
-                                <div class="flex items-center gap-2 mt-2">
-                                    <div class="product-price text-title">$15.00</div>
-                                    <div class="product-origin-price text-title text-secondary2">
-                                        <del>$25.00</del>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="quick-view-btn button-main py-3 px-5 bg-black hover:bg-green text-white rounded-full whitespace-nowrap">
-                            QUICK VIEW
-                        </div>
-                    </div>
-                    <div class='product-item item py-5 flex items-center justify-between gap-3 border-b border-line' data-item="2">
-                        <div class="infor flex items-center gap-5">
-                            <div class="bg-img">
-                                <img src='assets/images/product/fashion/2-2.png' alt='img' class='w-[100px] aspect-square flex-shrink-0 rounded-lg'>
-                            </div>
-                            <div class=''>
-                                <div class="name text-button">Faux-leather trousers</div>
-                                <div class="flex items-center gap-2 mt-2">
-                                    <div class="product-price text-title">$15.00</div>
-                                    <div class="product-origin-price text-title text-secondary2">
-                                        <del>$25.00</del>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="quick-view-btn button-main py-3 px-5 bg-black hover:bg-green text-white rounded-full whitespace-nowrap">
-                            QUICK VIEW
-                        </div>
-                    </div>
-                    <div class='product-item item py-5 flex items-center justify-between gap-3 border-b border-line' data-item="3">
-                        <div class="infor flex items-center gap-5">
-                            <div class="bg-img">
-                                <img src='assets/images/product/fashion/3-3.png' alt='img' class='w-[100px] aspect-square flex-shrink-0 rounded-lg'>
-                            </div>
-                            <div class=''>
-                                <div class="name text-button">Faux-leather trousers</div>
-                                <div class="flex items-center gap-2 mt-2">
-                                    <div class="product-price text-title">$15.00</div>
-                                    <div class="product-origin-price text-title text-secondary2">
-                                        <del>$25.00</del>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="quick-view-btn button-main py-3 px-5 bg-black hover:bg-green text-white rounded-full whitespace-nowrap">
-                            QUICK VIEW
-                        </div>
-                    </div>
-                    <div class='product-item item py-5 flex items-center justify-between gap-3' data-item="4">
-                        <div class="infor flex items-center gap-5">
-                            <div class="bg-img">
-                                <img src='assets/images/product/fashion/4-2.png' alt='img' class='w-[100px] aspect-square flex-shrink-0 rounded-lg'>
-                            </div>
-                            <div class=''>
-                                <div class="name text-button">Faux-leather trousers</div>
-                                <div class="flex items-center gap-2 mt-2">
-                                    <div class="product-price text-title">$15.00</div>
-                                    <div class="product-origin-price text-title text-secondary2">
-                                        <del>$25.00</del>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="quick-view-btn button-main py-3 px-5 bg-black hover:bg-green text-white rounded-full whitespace-nowrap">
-                            QUICK VIEW
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="right cart-block md:w-1/2 w-full py-6 relative overflow-hidden">
                 <div class="heading px-6 pb-3 flex items-center justify-between relative">
                     <div class="heading5">Shopping Cart</div>

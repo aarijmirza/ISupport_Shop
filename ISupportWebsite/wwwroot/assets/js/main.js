@@ -333,7 +333,6 @@ const closeModalWishlist = () => {
 };
 
 addWishlistBtns.forEach((addWishlistBtn) => {
-    debugger
     addWishlistBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         addWishlistBtn.classList.toggle("active");
@@ -360,23 +359,21 @@ modalWishlistMain.addEventListener("click", (e) => {
 
 // Set wishlist length
 const handleItemModalWishlist = () => {
-    wishlistStore = localStorage.getItem("wishlistStore");
+    debugger
+    wishlistStore = localStorage.getItem("_Wishlistitems");
 
     if (wishlistStore) {
         wishlistIcon.querySelector("span").innerHTML =
             JSON.parse(wishlistStore).length;
     }
-    debugger
     // Set wishlist item
     const listItemWishlist = document.querySelector(
         ".modal-wishlist-block .list-product"
     );
 
     listItemWishlist.innerHTML = "";
-    debugger
     var getWishlistItem = localStorage.getItem("_Wishlistitems");
     console.log(getWishlistItem);
-    debugger
     if (JSON.parse(getWishlistItem).length === 0) {
         listItemWishlist.innerHTML = `<p class='mt-1'>No product in wishlist</p>`;
     } else {
@@ -419,7 +416,6 @@ const handleItemModalWishlist = () => {
             listItemWishlist.appendChild(prdItem);
         });
     }
-    debugger
     const prdItems = listItemWishlist.querySelectorAll(".item");
     prdItems.forEach((prd) => {
         const removeWishlistBtn = prd.querySelector(".remove-wishlist-btn");
@@ -502,19 +498,15 @@ modalCartMain.addEventListener("click", (e) => {
 const handleItemModalCart = () => {
     cartStore = localStorage.getItem("cartStore");
     cartStore = cartStore ? JSON.parse(cartStore) : [];
-    debugger
     if (cartStore) {
         cartIcon.querySelector("span").innerHTML = cartStore.length;
     }
-    debugger
-    // Set cart item
+  // Set cart item
     const listItemCart = document.querySelector(
    
         ".modal-cart-block .list-product"
     );
-    debugger
     listItemCart.innerHTML = "";
-    debugger
     var getWishlistItem = localStorage.getItem("_Wishlistitems");
     console.log(getWishlistItem);
     
@@ -527,7 +519,6 @@ const handleItemModalCart = () => {
         
         wishlistItems.forEach((item) => {
             totalCart = Number(totalCart) + Number(item.price)
-            debugger
             // Create prd
             const prdItem = document.createElement("div");
             prdItem.setAttribute("data-item", item.id);

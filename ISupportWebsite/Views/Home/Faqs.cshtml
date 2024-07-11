@@ -1,17 +1,83 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "FAQs";
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 }
+<style>
+    .banner-bg {
+        background: url('assets/images/AboutUs_bg.png');
+        background-size: cover;
+        margin-top: 5rem;
+        height: 340px;
+    }
 
+    @@media only screen and (max-width: 600px) {
+        .banner-bg {
+            background: url(assets/images/AboutUs_bg.png);
+            background-size: cover;
+            margin-top: 0rem;
+            height: 185px;
+        }
+    }
+
+    .card-header {
+        padding: 1.75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: #ffffff;
+        border-bottom: 1px solid #dfdfdf;
+        border-radius: 10px;
+    }
+
+        .card-header:first-child {
+            border-radius: 15px;
+        }
+
+    .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid #dfdfdf;
+        border-radius: 15px !important;
+    }
+
+    a {
+        color: #313131;
+        text-decoration: none;
+        background-color: transparent;
+        font-size: 21px;
+        font-weight: 500;
+    }
+
+    .faq-container {
+        border-radius: 10px;
+        background: linear-gradient(to right, #EFD74A, #F9444B, #2AA1FB, #14E4AB);
+        padding: 2px;
+    }
+
+    .faq-border {
+        border: none;
+        border-radius: 10px;
+        padding: 10px 10px;
+        background-color: white;
+        cursor: pointer;
+    }
+
+</style>
 <div class="breadcrumb-block style-shared">
-    <div class="breadcrumb-main overflow-hidden" style="background: url('assets/images/AboutUs_bg.png'); background-size:cover; margin-top:5rem;height: 340px;">
+    <div class="breadcrumb-main overflow-hidden banner-bg">
         <div class="container lg:pt-[134px] pt-24 pb-10 relative">
             <div class="main-content w-full h-full flex flex-col items-center justify-center relative z-[1]">
                 <div class="text-content">
-                    <div class="heading2 text-center">Privacy Policy</div>
+                    <div class="heading2 text-center">FAQs</div>
                     <div class="link flex items-center justify-center gap-1 caption1 mt-3">
                         <a href='@Url.Action("Index","Home")'>Homepage</a>
                         <i class="ph ph-caret-right text-sm text-secondary2"></i>
-                        <div class='text-secondary2 capitalize'>Privacy Policy</div>
+                        <div class='text-secondary2 capitalize'>FAQs</div>
                     </div>
                 </div>
             </div>
@@ -19,685 +85,52 @@
     </div>
 </div>
 
-<div class='faqs-block md:py-20 py-10'>
+<div class='md:py-20 py-10'>
     <div class="container">
-        <div class='tab-question flex flex-col gap-5'>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
+        <div class="faq-container">
+            <p class="faq-border" style="font-size:16px; font-weight:500; text-align:center;">FAQs</p>
         </div>
-        <div class='tab-question flex flex-col gap-5'>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
+        <h2 class="pb-5" style="font-size:36px; font-weight:700; text-align:center;">Frequently Asked <span style="background: linear-gradient(to right,#EFD74A, #F9444B, #2AA1FB, #14E4AB); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Questions</span></h2>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                        Collapsible Group Item #1
+                        <img src="~/assets/images/arrow-up-circle.svg" style="float: inline-end;" />
+                    </a>
                 </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
+                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
                 </div>
             </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
+            <div class="pb-2"></div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                        Collapsible Group Item #2
+                        <img src="~/assets/images/arrow-up-circle.svg" style="float: inline-end;" />
+                    </a>
                 </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
+                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
                 </div>
             </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
+            <div class="pb-2"></div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                        Collapsible Group Item #3
+                        <img src="~/assets/images/arrow-up-circle.svg" style="float: inline-end;" />
+                    </a>
                 </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-        </div>
-        <div class='tab-question flex flex-col gap-5'>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
+                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-        </div>
-        <div class='tab-question flex flex-col gap-5'>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-        </div>
-        <div class='tab-question flex flex-col gap-5'>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-        </div>
-        <div class='tab-question flex flex-col gap-5'>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-        </div>
-        <div class='tab-question flex flex-col gap-5'>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">
-                        How does COVID-19 affect my online orders and store purchases?
-                    </div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com
-                </div>
-            </div>
-            <div class='question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer'>
-                <div class="heading flex items-center justify-between gap-6">
-                    <div class="heading6">NEW! Plus sizes for Woman</div>
-                    <i class="ph ph-caret-right text-2xl"></i>
-                </div>
-                <div class="content body1 text-secondary">
-                    The courier companies have adapted their
-                    procedures to
-                    guarantee the safety of our employees and our community. We thank you for your patience,
-                    as there may be
-                    some delays to deliveries.
-                    We remind you that you can still find us at Mango.com and on all our online channels.
-                    Our customer
-                    services are still there for you, to answer any questions you may have, although due to
-                    the current
-                    situation, we are operating with longer waiting times.
                 </div>
             </div>
         </div>

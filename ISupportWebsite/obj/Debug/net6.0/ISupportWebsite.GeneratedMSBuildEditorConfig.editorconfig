@@ -9,57 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ISupportWebsite
 build_property.RootNamespace = ISupportWebsite
-build_property.ProjectDir = E:\Project\ISupportShop\ISupportWebsite\
+build_property.ProjectDir = E:\Projects\ISupport_Shop\ISupportWebsite\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\Project\ISupportShop\ISupportWebsite
+build_property.MSBuildProjectDirectory = E:\Projects\ISupport_Shop\ISupportWebsite
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/Project/ISupportShop/ISupportWebsite/Views/Home/About.cshtml]
+[E:/Projects/ISupport_Shop/ISupportWebsite/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Project/ISupportShop/ISupportWebsite/Views/Home/Contact.cshtml]
+[E:/Projects/ISupport_Shop/ISupportWebsite/Views/Home/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/ISupport_Shop/ISupportWebsite/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Project/ISupportShop/ISupportWebsite/Views/Home/Faqs.cshtml]
+[E:/Projects/ISupport_Shop/ISupportWebsite/Views/Home/Faqs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGYXFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Project/ISupportShop/ISupportWebsite/Views/Home/Index.cshtml]
+[E:/Projects/ISupport_Shop/ISupportWebsite/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Project/ISupportShop/ISupportWebsite/Views/Home/PrivacyPolicy.cshtml]
+[E:/Projects/ISupport_Shop/ISupportWebsite/Views/Home/PrivacyPolicy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5UG9saWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Project/ISupportShop/ISupportWebsite/Views/Home/ReturnRefund.cshtml]
+[E:/Projects/ISupport_Shop/ISupportWebsite/Views/Home/ReturnRefund.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXR1cm5SZWZ1bmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Project/ISupportShop/ISupportWebsite/Views/Home/Service.cshtml]
+[E:/Projects/ISupport_Shop/ISupportWebsite/Views/Home/Service.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXJ2aWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Project/ISupportShop/ISupportWebsite/Views/Home/TermsCondition.cshtml]
+[E:/Projects/ISupport_Shop/ISupportWebsite/Views/Home/TermsCondition.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZXJtc0NvbmRpdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Project/ISupportShop/ISupportWebsite/Views/Home/Wishlist.cshtml]
+[E:/Projects/ISupport_Shop/ISupportWebsite/Views/Home/Wishlist.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXaXNobGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Project/ISupportShop/ISupportWebsite/Views/_ViewImports.cshtml]
+[E:/Projects/ISupport_Shop/ISupportWebsite/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Project/ISupportShop/ISupportWebsite/Views/_ViewStart.cshtml]
+[E:/Projects/ISupport_Shop/ISupportWebsite/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Project/ISupportShop/ISupportWebsite/Views/Shared/_Layout.cshtml]
+[E:/Projects/ISupport_Shop/ISupportWebsite/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-y0h9wfpeo1

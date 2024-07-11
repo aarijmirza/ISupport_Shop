@@ -1,0 +1,513 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\ISupportWebsite.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ISupportWebsite.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\assets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\css\\slick.css",
+      "PackagePath": "staticwebassets\\assets\\css\\slick.css"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\css\\swiper-bundle.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\swiper-bundle.min.css"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\AboutUs_bg.png",
+      "PackagePath": "staticwebassets\\assets\\images\\AboutUs_bg.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\About_1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\About_1.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\About_2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\About_2.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\About_man.png",
+      "PackagePath": "staticwebassets\\assets\\images\\About_man.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\Apple.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\Apple.svg"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\Apple_white.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Apple_white.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\Earn_bg.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Earn_bg.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\Google.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\Google.svg"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\Google_white.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Google_white.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\Lines.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Lines.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\Service-main-bg.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Service-main-bg.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\Vector.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Vector.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\app-store.png",
+      "PackagePath": "staticwebassets\\assets\\images\\app-store.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\E-Commerce.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\E-Commerce.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\Group1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\Group1.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\Group2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\Group2.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\banner-furniture1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\banner-furniture1.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\banner-furniture2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\banner-furniture2.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\banner-furniture3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\banner-furniture3.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\banner-furniture4.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\banner-furniture4.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\banner-furniture5.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\banner-furniture5.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\banner-furniture6.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\banner-furniture6.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\banner-furniture7.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\banner-furniture7.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\banner-furniture8.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\banner-furniture8.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\deal_banner1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\deal_banner1.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\deal_banner2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\deal_banner2.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\deal_banner3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\deal_banner3.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\middle-banner.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\middle-banner.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\product deals banner1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\product deals banner1.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\product deals banner2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\product deals banner2.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\product deals banner3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\product deals banner3.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\banner\\refer.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\refer.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\fav.png",
+      "PackagePath": "staticwebassets\\assets\\images\\fav.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\google-play.png",
+      "PackagePath": "staticwebassets\\assets\\images\\google-play.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\home-slider.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\home-slider.jpg"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\home-slider.png",
+      "PackagePath": "staticwebassets\\assets\\images\\home-slider.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\logo\\ISupport_Logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\ISupport_Logo.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\logo\\customerservice.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\customerservice.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\logo\\guarantee.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\guarantee.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\logo\\icn-fb.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\icn-fb.svg"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\logo\\icn-insta.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\icn-insta.svg"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\logo\\icn-tiktok.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\icn-tiktok.svg"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\logo\\icn-whatsapp.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\icn-whatsapp.svg"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\logo\\moneyback.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\moneyback.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\logo\\moneyback.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\moneyback.svg"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\logo\\shipping.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\shipping.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\other\\About-Us.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\other\\About-Us.jpg"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\payment\\1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\payment\\1.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\payment\\2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\payment\\2.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\payment\\3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\payment\\3.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\payment\\4.png",
+      "PackagePath": "staticwebassets\\assets\\images\\payment\\4.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\payment\\5.png",
+      "PackagePath": "staticwebassets\\assets\\images\\payment\\5.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\plus-white.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\plus-white.svg"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\plus.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\plus.svg"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\products\\image 43.png",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\image 43.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\products\\image 44.png",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\image 44.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\products\\image 45.png",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\image 45.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\products\\image 46.png",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\image 46.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\products\\image 47.png",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\image 47.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\products\\image 48.png",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\image 48.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\products\\image 49.png",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\image 49.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\products\\image 50.png",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\image 50.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\products\\image 51.png",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\image 51.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\products\\image 52.png",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\image 52.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\slider\\Group2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\slider\\Group2.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\images\\slider\\main-banner1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\slider\\main-banner1.png"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\blog.js",
+      "PackagePath": "staticwebassets\\assets\\js\\blog.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\custom.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\magnific-popup.min.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\phosphor-icons.js",
+      "PackagePath": "staticwebassets\\assets\\js\\phosphor-icons.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\product-detail.js",
+      "PackagePath": "staticwebassets\\assets\\js\\product-detail.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\shop.js",
+      "PackagePath": "staticwebassets\\assets\\js\\shop.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\slick.min.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\swiper-bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\swiper-bundle.min.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\vendor\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\vendor\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\vendor\\modernizr-3.6.0.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\modernizr-3.6.0.min.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\vendor\\popper.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\popper.min.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\vendor\\vendor.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\vendor.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\assets\\js\\vendor\\vendor.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\vendor.min.js"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\css2",
+      "PackagePath": "staticwebassets"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\dist\\output-scss.css",
+      "PackagePath": "staticwebassets\\dist\\output-scss.css"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\dist\\output-tailwind.css",
+      "PackagePath": "staticwebassets\\dist\\output-tailwind.css"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans.zip",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans.zip"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\InstrumentSans-Italic-VariableFont_wdth,wght.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\InstrumentSans-Italic-VariableFont_wdth,wght.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\InstrumentSans-VariableFont_wdth,wght.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\InstrumentSans-VariableFont_wdth,wght.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\OFL.txt",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\OFL.txt"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\README.txt",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\README.txt"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans-Bold.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans-Bold.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans-BoldItalic.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans-Italic.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans-Italic.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans-Medium.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans-Medium.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans-MediumItalic.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans-Regular.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans-Regular.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans-SemiBold.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans-SemiBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans-SemiBoldItalic.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-Bold.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-Bold.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-BoldItalic.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-Italic.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-Italic.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-Medium.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-Medium.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-MediumItalic.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-Regular.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-Regular.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-SemiBold.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-SemiBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_Condensed-SemiBoldItalic.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-Bold.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-Bold.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-BoldItalic.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-Italic.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-Italic.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-Medium.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-Medium.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-MediumItalic.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-Regular.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-Regular.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-SemiBold.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-SemiBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\s\\Instrument_Sans\\static\\InstrumentSans_SemiCondensed-SemiBoldItalic.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\instrumentsans\\v1\\pximypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr-yp2JGEJOH9npSQb_gf1.ttf",
+      "PackagePath": "staticwebassets\\s\\instrumentsans\\v1\\pximypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr-yp2JGEJOH9npSQb_gf1.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\instrumentsans\\v1\\pximypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr-yp2JGEJOH9npSQi_gf1.ttf",
+      "PackagePath": "staticwebassets\\s\\instrumentsans\\v1\\pximypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr-yp2JGEJOH9npSQi_gf1.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\instrumentsans\\v1\\pximypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr-yp2JGEJOH9npST3-Qf1.ttf",
+      "PackagePath": "staticwebassets\\s\\instrumentsans\\v1\\pximypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr-yp2JGEJOH9npST3-Qf1.ttf"
+    },
+    {
+      "Id": "E:\\Projects\\ISupport_Shop\\ISupportWebsite\\wwwroot\\s\\instrumentsans\\v1\\pximypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr-yp2JGEJOH9npSTF-Qf1.ttf",
+      "PackagePath": "staticwebassets\\s\\instrumentsans\\v1\\pximypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr-yp2JGEJOH9npSTF-Qf1.ttf"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.ISupportWebsite.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.ISupportWebsite.props",
+      "PackagePath": "build\\ISupportWebsite.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ISupportWebsite.props",
+      "PackagePath": "buildMultiTargeting\\ISupportWebsite.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.ISupportWebsite.props",
+      "PackagePath": "buildTransitive\\ISupportWebsite.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
